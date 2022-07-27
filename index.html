@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <title>Frontend Test 1</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body style="font-family: sanspro-light;">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+  </script>
+
+  <!-- Javascript -->
+
+  <!-- <script>
+
+    function flip() {
+      var a = document.getElementById("division1");
+      a.classList.toggle("division1_flip");
+      var b = document.getElementById("img2");
+      b.classList.toggle("img2");
+    }
+
+    function change() {
+      var image = document.getElementById('img3');
+      if (image.src.includes("computer2.jpg")) {
+        image.src = "computer2b.jpg";
+      }
+      else {
+        image.src = "computer2.jpg";
+      }
+    }
+
+  </script> -->
+
+  <!-- jquery -->
+
+  <script>
+
+    function flip() {
+      $("#division1").toggleClass("division1_flip");
+      $("#img2").toggleClass("img2");
+    }
+
+    function change() {
+      if ($("#img3").attr("src") == "computer2.jpg") {
+        $("#img3").attr("src", "computer2b.jpg");
+      }
+      else {
+        $("#img3").attr("src", "computer2.jpg");
+      }
+    }
+
+  </script>
+
+  <img class="card-img-top" src="hero.jpg" alt="Not Found" width="100%">
+  <div class="card-img-overlay">
+    <p class="card-text heading1 display-4 top-left">Turn your videos &<br />pictures into a movie <br /> with just one
+      click </p>
+  </div>
+
+  <div class="container-fluid text-center">
+    <section class="heading2" style="color:#0f0f0f;">Tell Amazing Stories<br></section>
+    <section id="heading2sec1">Editing software that brings your videos and pictures together in one movie.</section>
+  </div>
+
+
+  <div id="division1" class="row w-100 pt-4">
+    <div class="col-sm-6"> <img id="img2" src="computer1.jpg" style="width:80%; height:90%;">
+    </div>
+    <div class="col-sm-6">
+      <section id="section1">
+        <h1 id="section_h">
+          Customize Your Moments
+        </h1>
+        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel enim harum, molestiae molestias
+          voluptatum temporibus quidem nihil rem aspernaturcupiditate perspiciatis eligendi quos repellendus
+          quia quae odit ipsam eos voluptas?</p>
+        <button id="button1" onclick="flip();">flip</button>
+      </section>
+    </div>
+  </div>
+
+  <div id="division2" class="row w-100">
+    <div class="col-sm-6">
+      <section id="section2">
+        <h1 id="section_h">
+          Autometic Crop & Zoom
+        </h1>
+        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel enim harum, molestiae molestias
+          voluptatum temporibus quidem nihil rem aspernaturcupiditate perspiciatis eligendi quos repellendus
+          quia quae odit ipsam eos voluptas?</p>
+        <div>
+          <button id="button2" onclick="change();">Change</button>
+        </div>
+      </section>
+    </div>
+    <div class="col-sm-6"> <img id="img3" src="computer2.jpg" style="width:80%; height:90%;float:right"></div>
+  </div>
+
+  <div class="row-12 w-100">
+    <div class="section3">
+
+      <img id="img4" class="card-img-top" src="closing-photo.jpg" alt="Not Found">
+      <div class="box">
+        <h2 id="heading3">Free trial. No Credit card. No Hassle.</h2>
+        <p>Just enter your email address below and begin capturing moments.</p>
+        <form>
+          <input id="input" type="email" placeholder="enter your email address">
+          <button id="button3" onclick="">START FREE TRIAL</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <ul class="nav">
+    <li><a href="#home">Sitemap&nbsp;</a></li>
+    <p>&nbsp;|</p>
+    <li><a href="#about">Legal</a>&nbsp; </li>
+    <p> &nbsp;|</p>
+    <li><a href="#clients">Block</a></li>
+  </ul>
+
+</body>
+
+</html>
